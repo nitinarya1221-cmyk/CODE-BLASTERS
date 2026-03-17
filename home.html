@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Movie Ticket Booking</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#111;
+color:white;
+}
+nav img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+/* Navigation */
+
+nav{
+background:#e50914;
+padding:15px;
+display:flex;
+align-items:center;
+}
+
+nav h2{
+    justify-content: left;
+margin:0;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+text-align: right;
+}
+
+nav ul li{
+    text-align: right;
+margin:0 15px;
+}
+
+nav ul li a{
+    text-align: right;
+text-decoration:none;
+color:white;
+font-size:18px;
+}
+
+/* Hero Section */
+
+.hero{
+
+background-image:
+url("https://i.pinimg.com/1200x/89/bf/3b/89bf3bffe942789914bab55210f9fc4e.jpg");
+background-size:cover;
+background-position:center;
+height:550px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+ height: 500px;
+    background: linear-gradient(to bottom,rgba(28, 27, 27, 0.6), rgba(0,0,0,0.8)),
+                url("https://i.pinimg.com/1200x/89/bf/3b/89bf3bffe942789914bab55210f9fc4e.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+
+.hero h1{
+font-size:40px;
+}
+
+.hero button{
+padding:12px 25px;
+font-size:18px;
+background:#e50914;
+border:none;
+color:white;
+border-radius:5px;
+}
+.hero button a{
+    color: aliceblue;
+}
+
+/* Section */
+
+.section{
+padding:40px;
+}
+
+.section h2{
+text-align:center;
+margin-bottom:30px;
+}
+
+/* Movie Cards */
+
+.movies{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.card{
+background:#1c1c1c;
+width:250px;
+margin:15px;
+border-radius:10px;
+overflow:hidden;
+text-align:center;
+ box-shadow: 0 4px 10px rgb(209, 15, 79);
+ transition: 0.3s ease;
+}
+.card:hover {
+            transform: translateY(-6px);
+        }
+
+.card img{
+width:100%;
+height:300px;
+}
+
+.card h3{
+margin:10px;
+}
+
+.card button{
+margin-bottom:15px;
+padding:10px 20px;
+background:#e50914;
+border:none;
+color:white;
+border-radius:5px;
+}
+
+/* Offers */
+
+.offers{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.offer-card{
+background:#222;
+padding:20px;
+margin:15px;
+width:250px;
+border-radius:10px;
+text-align:center;
+box-shadow: 0 4px 10px rgb(209, 15, 79);
+ transition: 0.3s ease;
+
+h3:hover{
+    background-color: #e50914;
+}
+}
+.offer-card:hover {
+            transform: translateY(-6px);
+        }
+
+/* Footer */
+
+footer{
+background-color:#e50914;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+footer p a{
+    color: aliceblue;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<nav>
+    <img src="cinego.jpeg">
+<h2>CineGo</h2>
+<ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="movie.html">movies</a></li>
+<li><a href="theater.html">theatre</a></li>
+<li><a href="contact.html">Help</a></li>
+</ul>
+</nav>
+
+<!-- Hero Banner -->
+<div class="hero">
+<h1>Book your Tickets</h1>
+<p>Get up to 50% OFF on selected shows</p>
+<button><a href="movie.html">Movies</a></button>
+</div>
+
+<!-- Now Showing -->
+
+<div class="section">
+<h2>Now Showing</h2>
+
+<div class="movies">
+
+<div class="card">
+<img src="leo.jpeg">
+<h3>Leo</h3>
+<a href="theatre-leo.html">
+    <button>Book Now</button></a>
+</div>
+
+<div class="card">
+<img src="jailer.jpeg">
+<h3>Jailer</h3>
+<a href="theatre-jailer.html">
+<button>Book Now</button></a>
+</div>
+
+<div class="card">
+<img src="avengers.jpg">
+<h3>Avengers</h3>
+<a href="theatre-avenger.html">
+<button>Book Now</button></a>
+</div>
+
+<div class="card">
+<img src="spider.jpeg">
+<h3>Spider-Man</h3>
+<a href="theatre-spider.html">
+<button>Book Now</button></a>
+</div>
+
+</div>
+</div>
+
+<!-- Upcoming Movies -->
+
+<div class="section">
+<h2>Upcoming Movies</h2>
+
+<div class="movies">
+
+<div class="card">
+<img src="jananayagam.jpg">
+<h3>jananayagan</h3>
+<p>Release: July 2026</p>
+</div>
+
+<div class="card">
+<img src="toxic.jpg">
+<h3>Toxic 2</h3>
+<p>Release: Aug 2026</p>
+</div>
+
+<div class="card">
+<img src="street.jpg">
+<h3>Street fighter</h3>
+<p>Release: Oct 2026</p>
+</div>
+
+</div>
+</div>
+
+<!-- Ticket Offers -->
+
+<div class="section">
+<h2>Special Ticket Offers</h2>
+
+<div class="offers">
+
+<div class="offer-card">
+<h3>Student Offer</h3>
+<p>Get 30% OFF on weekday tickets</p>
+</div>
+
+<div class="offer-card">
+<h3>Buy 1 Get 1</h3>
+<p>Every Friday special offer</p>
+</div>
+
+<div class="offer-card">
+<h3>Credit Card Offer</h3>
+<p>20% cashback using bank cards</p>
+</div>
+
+</div>
+</div>
+
+<!-- Footer -->
+
+<footer>
+<p>Source : <a href="https://in.pinterest.com/">Pinterest</a></p>
+<p>© 2026 CineBook | Movie Ticket Booking</p>
+</footer>
+
+</body>
+</html>

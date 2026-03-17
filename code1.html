@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>CineGo Seat Booking</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#111;
+text-align:center;
+}
+header{
+    background:rgb(227,7,7);
+    padding:3px;
+    height: 100px;
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+}
+nav a{
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+    font-size:10px;
+}
+
+.screen{
+background:#ddd;
+padding:10px;
+width:300px;
+margin:20px auto;
+border-radius:5px;
+}
+
+.section-title{
+margin-top:20px;
+font-weight:bold;
+color: aliceblue;
+}
+
+.row{
+display:flex;
+justify-content:center;
+margin:5px;
+}
+
+.row-label{
+width:20px;
+margin-right:10px;
+font-weight:bold;
+color: aliceblue;
+}
+
+.seat{
+width:30px;
+height:30px;
+border:2px solid #e50914;
+border-radius:5px;
+margin:4px;
+cursor:pointer;
+color: pink;
+}
+
+.seat.selected{
+background:#e50914;
+}
+
+.seat.sold{
+background:orangered;
+border:none;
+cursor:not-allowed;
+}
+
+.legend{
+margin-top:20px;
+}
+
+.pay{
+margin-top:20px;
+background:white;
+color:#111;
+padding:15px 40px;
+border:none;
+font-size:18px;
+border-radius:10px;
+}
+h3{
+    color: aliceblue;
+}
+h2{
+    color: aliceblue;
+}
+
+</style>
+
+</head>
+
+<body>
+<header>
+    <nav>
+<h2>CineGo Seat Booking</h2></nav>
+</header>
+
+<div class="section-title">PLATINUM</div>
+
+<div class="row">
+<div class="row-label">A</div>
+<div class="seat">1</div><div class="seat">2</div><div class="seat">3</div>
+<div class="seat sold">4</div><div class="seat">5</div>
+<div class="seat">6</div><div class="seat">7</div>
+<div class="seat">8</div><div class="seat">9</div>
+<div class="seat">10</div>
+</div>
+
+<div class="row">
+<div class="row-label">B</div>
+<div class="seat">1</div><div class="seat">2</div><div class="seat">3</div>
+<div class="seat">4</div><div class="seat">5</div>
+<div class="seat">6</div><div class="seat sold">7</div>
+<div class="seat">8</div><div class="seat">9</div>
+<div class="seat">10</div>
+</div>
+
+<div class="row">
+<div class="row-label">C</div>
+<div class="seat">1</div><div class="seat"></div>2<div class="seat">3</div>
+<div class="seat">4</div><div class="seat">5</div>
+<div class="seat">6</div><div class="seat">7</div>
+<div class="seat">8</div><div class="seat sold">9</div>
+<div class="seat">10</div>
+</div>
+
+<div class="row">
+<div class="row-label">D</div>
+<div class="seat">1</div><div class="seat">2</div><div class="seat">3</div>
+<div class="seat">4</div><div class="seat">5</div>
+<div class="seat">6</div><div class="seat">7</div>
+<div class="seat">8</div><div class="seat">9</div>
+<div class="seat">10</div>
+</div>
+
+<div class="row">
+<div class="row-label">E</div>
+<div class="seat">1</div><div class="seat">2</div><div class="seat">3</div>
+<div class="seat">4</div><div class="seat">5</div>
+<div class="seat">6</div><div class="seat">7</div>
+<div class="seat">8</div><div class="seat">9</div>
+<div class="seat">10</div>
+</div>
+
+
+<div class="section-title">GOLD</div>
+
+<div class="row">
+<div class="row-label">F</div>
+<div class="seat">1</div><div class="seat">2</div><div class="seat">3</div>
+<div class="seat">4</div><div class="seat sold">5</div>
+<div class="seat sold">6</div><div class="seat">7</div>
+<div class="seat">8</div><div class="seat">9</div>
+<div class="seat">10</div>
+</div>
+
+<div class="row">
+<div class="row-label">G</div>
+<div class="seat sold">1</div><div class="seat sold">2</div><div class="seat sold">3</div>
+<div class="seat sold">4</div><div class="seat sold">5</div>
+<div class="seat">6</div><div class="seat">7</div>
+<div class="seat">8</div><div class="seat">9</div>
+<div class="seat">10</div>
+</div>
+
+<div class="row">
+<div class="row-label">H</div>
+<div class="seat">1</div><div class="seat">2</div><div class="seat">3</div>
+<div class="seat">4</div><div class="seat">5</div>
+<div class="seat">6</div><div class="seat">7</div>
+<div class="seat">8</div><div class="seat">9</div>
+<div class="seat">10</div>
+</div>
+
+<div class="row">
+<div class="row-label">I</div>
+<div class="seat">1</div><div class="seat">2</div><div class="seat sold">3</div>
+<div class="seat sold">4</div><div class="seat">5</div>
+<div class="seat">6</div><div class="seat">7</div>
+<div class="seat">8</div><div class="seat">9</div>
+<div class="seat">10</div>
+</div>
+
+<div class="row">
+<div class="row-label">J</div>
+<div class="seat sold">1</div><div class="seat">2</div><div class="seat sold">3</div>
+<div class="seat sold">4</div><div class="seat sold">5</div>
+<div class="seat">6</div><div class="seat">7</div>
+<div class="seat">8</div><div class="seat">9</div>
+<div class="seat">10</div>
+</div>
+
+<div class="screen">SCREEN</div>
+
+<h3>Tickets: <span id="count">0</span></h3>
+<h3>Total: ₹<span id="total">0</span></h3>
+<a href="pay.html">
+<button  class="pay">Pay ₹<span id="pay">0</span></button></a>
+
+
+<script>
+
+const seats=document.querySelectorAll(".seat:not(.sold)");
+const count=document.getElementById("count");
+const total=document.getElementById("total");
+const pay=document.getElementById("pay");
+
+let price=180;
+
+seats.forEach(seat=>{
+seat.addEventListener("click",()=>{
+
+seat.classList.toggle("selected");
+
+let selected=document.querySelectorAll(".seat.selected").length;
+
+let amount=selected*price;
+
+count.innerText=selected;
+total.innerText=amount;
+pay.innerText=amount;
+
+});
+});
+
+</script>
+
+</body>
+</html>

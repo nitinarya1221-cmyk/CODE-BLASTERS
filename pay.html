@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CineGo</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:rgb(227,7,7);
+}
+
+.container{
+    width:500px;
+    margin:50px auto;
+    background:#111;
+    padding:50px;
+    border-radius:20px;
+    box-shadow:0 0 10px gray;
+    color: aliceblue;
+}
+
+h2{
+    text-align:center;
+    color: aliceblue;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border:1px solid aliceblue;
+    border-radius:5px;
+}
+
+button{
+    width:80%;
+    padding:10px;
+    background:#e50914;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#b20710;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Ticket Payment</h2>
+
+<form action="success.html">
+
+<label>Card Holder Name</label>
+<input type="text" placeholder="Enter name on card" required>
+
+<label>Card Number</label>
+<input type="text" placeholder="1234 5678 9012 3456" required>
+
+<label>Expiry Date</label>
+<input type="month" required>
+
+<label>CVV</label>
+<input type="password" placeholder="123" required>
+
+<label>Amount</label>
+<input type="text" placeholder="Enter amount" required>
+<a href="success.html">
+<button type="submit">Pay Now</button></a>
+
+</form>
+
+</div>
+
+</body>
+</html>

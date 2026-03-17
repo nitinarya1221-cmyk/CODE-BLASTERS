@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>movie ticket booking</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: rgb(226, 7, 7);
+            font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+        }
+
+        .container {
+            width: 95%;
+            margin: 30px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .box1, .box2, .box3 {
+            background: #111;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            font-size: 14px;
+            line-height: 1.6;
+            transition: 0.3s ease;
+        }
+
+        .box1:hover, .box2:hover, .box3:hover {
+            transform: translateY(-6px);
+        }
+
+        .box1 img, .box2 img, .box3 img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .heading {
+            font-weight: 600;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        button {
+            margin-top: 12px;
+            width: 100%;
+            padding: 10px;
+            background-color:rgb(247, 244, 245);
+            color: black;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color:gray;
+        }
+        p{
+            color: aliceblue;
+        }
+         header{
+    background:#111;
+    padding:20px;
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+}
+nav a{
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+    font-size:18px;
+}
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+        <a href="home.html">Home</a>
+        <a href="movie.html">Movie</a>
+        <a href="theater.html">Theatre</a>
+        <a href="contact.html">Contact</a></nav>
+    </header>
+
+<div class="container">
+
+    <div class="box1">
+        <img src="vr.jpeg" alt="VR chennai">
+        <p class="heading">VR MALL<br>
+        Location: Chennai <br>
+        near thirumangalam metro📍 <br>
+        Enjoy with movie <br>
+        Contact: +91 98765 43210 <br></p>
+        <button>Explore</button>
+    </div>
+
+    <div class="box1">
+        <img src="kamala.avif" alt="Kamala">
+        <p class="heading">Kamala Theatres<br>
+        Location: Vadapalani📍 <br>
+        near vadapalani metro<br>
+        Enjoy with movie <br>
+        Contact: +91 91234 56789 <br></p>
+        <button>Explore</button>
+    </div>
+
+    <div class="box1">
+        <img src="sangam.jpeg" alt="sangam cinemas">
+        <p class="heading">Sangam cinemas<br>
+        Location: chennai <br>
+        near royapettah📍 <br>
+        Enjoy with movie <br>
+        Contact: +91 99887 77665 <br></p>
+        <button>Explore</button>
+    </div>
+
+    <div class="box2">
+        <img src="ea.jpg" alt="PVR">
+        <p class="heading">EA PVR theatre<br>
+        Location: chennai <br>
+        near LIC metro📍 <br>
+        enjoy with movie <br>
+        Contact: +91 90000 12345 <br></p>
+        <button>Explore</button>
+    </div>
+
+    <div class="box2">
+        <img src="ags.jpeg" alt="ags cinemas">
+        <p class="heading">AGS cinemas<br>
+        Location: chennai <br>
+        villivakkam📍 <br>
+        Enjoy with movie <br>
+        Contact: +91 95555 44444 <br></p>
+        <button>Explore</button>
+    </div>
+
+    <div class="box2">
+        <img src="phoenix.jpeg" alt="INOX">
+        <p class="heading">INOX theatre<br>
+        Location: chennai <br>
+        near phoenix market city📍 <br>
+        Enjoy with movie <br>
+        Contact: +91 96666 33333 <br></p>
+        <button>Explore</button>
+    </div>
+
+    <div class="box3">
+        <img src="vijaya.jpeg" alt="PVR palazzo">
+        <p class="heading">PVR Palazzo<br>
+        Location: chennai <br>
+        near vadapalani vijaya mall📍 <br>
+        Enjoy with movie <br>
+        Contact: +91 97777 22222 <br></p>
+        <button>Explore</button>
+    </div>
+
+    <div class="box3">
+        <img src="mani theatre.jpeg" alt="mani talkies">
+        <p class="heading">Mani talkies<br>
+        Location: chennai <br>
+        near manali new town📍 <br>
+        Enjoy with movie <br>
+        Contact: +91 98888 11111 <br></p>
+        <button>Explore</button>
+    </div>
+
+    <div class="box3">
+        <img src="devi.jpg" alt="Devi cinemas">
+        <p class="heading">Devi cinemas<br>
+        Location: chennai <br>
+        near government estate metro📍 <br>
+        Enjoy with movie <br>
+        Contact: +91 99999 00000 <br></p>
+        <button>Explore</button>
+    </div>
+
+</div>
+
+</body>
+</html>
