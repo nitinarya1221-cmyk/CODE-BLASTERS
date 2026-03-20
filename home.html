@@ -17,10 +17,8 @@ nav img{
     border-radius: 50%;
 }
 
-/* Navigation */
-
 nav{
-background:#e50914;
+background:rgb(227,7,7);
 padding:15px;
 display:flex;
 align-items:center;
@@ -48,8 +46,6 @@ text-decoration:none;
 color:white;
 font-size:18px;
 }
-
-/* Hero Section */
 
 .hero{
 
@@ -89,8 +85,6 @@ border-radius:5px;
     color: aliceblue;
 }
 
-/* Section */
-
 .section{
 padding:40px;
 }
@@ -100,7 +94,7 @@ text-align:center;
 margin-bottom:30px;
 }
 
-/* Movie Cards */
+
 
 .movies{
 display:flex;
@@ -140,7 +134,7 @@ color:white;
 border-radius:5px;
 }
 
-/* Offers */
+
 
 .offers{
 display:flex;
@@ -166,8 +160,6 @@ h3:hover{
             transform: translateY(-6px);
         }
 
-/* Footer */
-
 footer{
 background-color:#e50914;
 text-align:center;
@@ -183,10 +175,8 @@ footer p a{
 
 <body>
 
-<!-- Navigation -->
-
 <nav>
-    <img src="cinego.jpeg">
+    <img src="logo.png">
 <h2>CineGo</h2>
 <ul>
 <li><a href="home.html">Home</a></li>
@@ -196,14 +186,15 @@ footer p a{
 </ul>
 </nav>
 
-<!-- Hero Banner -->
+
+
 <div class="hero">
 <h1>Book your Tickets</h1>
 <p>Get up to 50% OFF on selected shows</p>
 <button><a href="movie.html">Movies</a></button>
 </div>
 
-<!-- Now Showing -->
+
 
 <div class="section">
 <h2>Now Showing</h2>
@@ -213,35 +204,31 @@ footer p a{
 <div class="card">
 <img src="leo.jpeg">
 <h3>Leo</h3>
-<a href="theatre-leo.html">
-    <button>Book Now</button></a>
+    <button onclick="selectMovie('Leo','leo.jpeg', 'theatre-leo.html')">Book Now</button>
 </div>
 
 <div class="card">
 <img src="jailer.jpeg">
 <h3>Jailer</h3>
-<a href="theatre-jailer.html">
-<button>Book Now</button></a>
+<button onclick="selectMovie('Jailer','jailer.jpeg', 'theatre-jailer.html')">Book Now</button>
 </div>
 
 <div class="card">
 <img src="avengers.jpg">
 <h3>Avengers</h3>
-<a href="theatre-avenger.html">
-<button>Book Now</button></a>
+<button onclick="selectMovie('Avengers','avengers.jpg', 'theatre-avenger.html')">Book Now</button>
 </div>
 
 <div class="card">
 <img src="spider.jpeg">
 <h3>Spider-Man</h3>
-<a href="theatre-spider.html">
-<button>Book Now</button></a>
+<button onclick="selectMovie('The Amazing Spider Man','spider.jpeg', 'theatre-spider.html')">Book Now</button>
 </div>
 
 </div>
 </div>
 
-<!-- Upcoming Movies -->
+
 
 <div class="section">
 <h2>Upcoming Movies</h2>
@@ -269,7 +256,7 @@ footer p a{
 </div>
 </div>
 
-<!-- Ticket Offers -->
+
 
 <div class="section">
 <h2>Special Ticket Offers</h2>
@@ -293,8 +280,15 @@ footer p a{
 
 </div>
 </div>
+<script>
+function selectMovie(movieName,movieImage, page) {
+    console.log("selectMovie:", movieName);
 
-<!-- Footer -->
+    localStorage.setItem("movieName", movieName);
+    localStorage.setItem("movieImage", movieImage);
+    window.location.href = page;
+}
+</script>
 
 <footer>
 <p>Source : <a href="https://in.pinterest.com/">Pinterest</a></p>

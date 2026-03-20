@@ -125,7 +125,7 @@ h2{
 
 <div class="row">
 <div class="row-label">C</div>
-<div class="seat">1</div><div class="seat"></div>2<div class="seat">3</div>
+<div class="seat">1</div><div class="seat">2</div><div class="seat">3</div>
 <div class="seat">4</div><div class="seat">5</div>
 <div class="seat">6</div><div class="seat">7</div>
 <div class="seat">8</div><div class="seat sold">9</div>
@@ -202,10 +202,44 @@ h2{
 
 <h3>Tickets: <span id="count">0</span></h3>
 <h3>Total: ₹<span id="total">0</span></h3>
-<a href="pay.html">
-<button  class="pay">Pay ₹<span id="pay">0</span></button></a>
+<button class="pay" onclick="goToPayment()">
+    Pay ₹<span id="pay">0</span>
+</button>
 
+<script>
+function goToPayment() {
+    let amount = document.getElementById("total").innerText;
 
+    if (amount == 0) {
+        alert("Select seats first!");
+        return;
+    }
+
+    localStorage.setItem("ticketAmount", amount);
+    window.location.href = "pay.html";
+}
+function goToPayment() {
+    let amount = document.getElementById("total").innerText;
+
+    let selectedSeats = [];
+    document.querySelectorAll(".seat.selected").forEach(seat => {
+        let row = seat.parentElement.querySelector(".row-label").innerText;
+        let number = seat.innerText;
+        selectedSeats.push(row + number);
+    });
+
+    let ticketCount = selectedSeats.length;
+
+    // 🔥 ADD THESE
+    localStorage.setItem("ticketAmount", amount);
+    localStorage.setItem("selectedSeats", selectedSeats.join(", "));
+    localStorage.setItem("ticketCount", ticketCount);
+
+    // 👉 Set movie name manually OR from another page
+
+    window.location.href = "pay.html";
+}
+</script>
 <script>
 
 const seats=document.querySelectorAll(".seat:not(.sold)");

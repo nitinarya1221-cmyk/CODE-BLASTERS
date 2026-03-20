@@ -7,7 +7,7 @@
 
 body{
 font-family:Arial;
-background:rgb(227,7,7);
+background:rgb(224, 141, 141);
 margin:0;
 padding:0;
 }
@@ -102,8 +102,6 @@ color:white;
 <body>
 
 
-
-
 <div class="date-bar">
 <a href="thur.html">
 <div class="date">THU<br>19</div></a>
@@ -122,14 +120,9 @@ color:white;
 <div class="theatre">
 <div class="theatre-name">PVR VR Chennai, Anna Nagar</div>
 <div class="status">Non-cancellable</div>
-
 <div class="show-times">
-    <a href="code1.html">
-<div class="time">09:00 AM</div></a>
-<a href="code1.html">    
-<div class="time">05:40 PM</div></a>
-<a href="code1.html">
-<div class="time">10:30 PM</div></a>
+<div class="time" onclick="selectShow('PVR VR Chennai, Anna Nagar', '06:40 AM')">06:40 AM</div>
+<div class="time" onclick="selectShow('PVR VR Chennai, Anna Nagar', '10:40 PM')">10:40 PM</div>
 </div>
 </div>
 
@@ -137,16 +130,13 @@ color:white;
 <!-- Theatre 2 -->
 
 <div class="theatre">
-<div class="theatre-name">Sathyam cinemas : Royapettah</div>
+<div class="theatre-name">The Vijay Park Multiplex: Injambakkam</div>
 <div class="status">Cancellation available</div>
 
 <div class="show-times">
-    <a href="code1.html">
-<div class="time">01:30 PM</div></a>
-<a href="code1.html">
-<div class="time">06:00 PM</div></a>
-<a href="code1.html">
-<div class="time">10:30 PM</div></a>
+<div class="time" onclick="selectShow('The Vijay Park Multiplex', '10:40 PM')">10:40 AM</div>
+<div class="time" onclick="selectShow('The Vijay Park Multiplex', '03:40 PM')">03:40 PM</div>
+<div class="time" onclick="selectShow('The Vijay Park Multiplex', '10:10 PM')">10:10 PM</div>
 </div>
 </div>
 
@@ -158,17 +148,19 @@ color:white;
 <div class="status">Non-cancellable</div>
 
 <div class="show-times">
-    <a href="code1.html">
-<div class="time">10:00 AM</div></a>
-<a href="code1.html">
-<div class="time">02:30 PM</div></a>
-<a href="code1.html">
-<div class="time">07:00 PM</div></a>
-<a href="code1.html">
-<div class="time">11:30 PM</div></a>
-</div>
-</div>
+<div class="time" onclick="selectShow('Rohini Silver Screens: Koyambedu', '07:50 AM')">07:50 AM</div>    
+<div class="time" onclick="selectShow('Rohini Silver Screens: Koyambedu', '12:10 AM')">12:10 AM</div>
+<script>
+function selectShow(theatre, time) {
+    localStorage.setItem("theatreName", theatre);
+    localStorage.setItem("showTime", time);
 
+    console.log("Theatre:", theatre);
+    console.log("Time:", time);
+
+    window.location.href = "code1.html";
+}
+</script>
 
 </body>
 </html>
