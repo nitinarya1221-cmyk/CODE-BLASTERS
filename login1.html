@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #111;
+            color: white;
+            margin: 0;
+
+            display: flex;
+            flex-direction: column;
+            background-image: url("https://www.shutterstock.com/image-illustration/abstract-red-black-light-pattern-600nw-1928002763.jpg");
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center;
+        }
+        header {
+        }
+        header h2 {
+            color: white;
+            margin: 0;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 0 10px red;
+        }
+
+        .container {
+            background: #0b0a0a;
+            padding: 30px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 0 30px rgba(211, 125, 125, 0.5);
+            margin: auto;
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: red;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        a{
+            color: aliceblue ;
+        }
+        .message {
+            text-align: center;
+            margin-top: 10px;
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>CineGO</h2>
+    </header>
+
+<div class="container">
+    <h2>Login</h2>
+
+    <input type="email" id="email" placeholder="Enter Email">
+    <input type="password" id="password" placeholder="Enter Password">
+
+    <button onclick="login()">Login</button><br><br>
+    <a href="sign.html">Sign up!</a>
+
+    <div class="message" id="msg"></div>
+</div>
+
+<script>
+function login() {
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value.trim();
+    let msg = document.getElementById("msg");
+
+    // 1. Empty check
+    if (email === "" || password === "") {
+        msg.innerText = "Please enter email and password!";
+        return;
+    }
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    // 2. Find user
+    let user = users.find(u => u.email === email);
+
+    if (!user) {
+        msg.innerText = "User not found!";
+        return;
+    }
+
+    // 3. Check password
+    if (user.password !== password) {
+        msg.innerText = "Incorrect password!";
+        return;
+    }
+
+    // 4. SUCCESS → Only here it will go to homepage
+    localStorage.setItem("loggedInUser", JSON.stringify(user));
+
+    msg.style.color = "lightgreen";
+    msg.innerText = "Login successful! Redirecting...";
+
+    setTimeout(() => {
+        window.location.href = "home.html"; // your home page
+    }, 1000);
+}
+</script>
+
+</body>
+</html>
