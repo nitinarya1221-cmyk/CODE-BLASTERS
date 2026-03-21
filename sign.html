@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #111;
+            color: white;
+            margin: 0;
+
+            display: flex;
+            flex-direction: column;
+            background-image: url("login.webp");
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center;
+        }
+
+        /* HEADER */
+        header {
+        }
+
+        header h2 {
+            color: white;
+            margin: 0;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 0 10px red;
+        }
+
+        /* CONTAINER */
+        .container {
+            background: #0b0a0a;
+            padding: 30px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 0 30px rgba(211, 125, 125, 0.5);
+
+            margin: auto;
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .container h2 {
+            color: white;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: red;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        a {
+            color: lightblue;
+            text-decoration: none;
+        }
+
+        .message {
+            text-align: center;
+            margin-top: 10px;
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h2>CineGO</h2>
+    </header>
+
+    <!-- SIGNUP FORM -->
+    <div class="container">
+        <h2>Sign Up</h2>
+
+        <input type="text" id="name" placeholder="Enter Name">
+        <input type="email" id="email" placeholder="Enter Email">
+        <input type="password" id="password" placeholder="Enter Password">
+        <button onclick="signup()">Create Account</button>
+
+        <h4>Already have an account?</h4>
+        <a href="login1.html">Login</a>
+
+        <div class="message" id="msg"></div>
+    </div>
+
+<script>
+function signup() {
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value.trim();
+    let msg = document.getElementById("msg");
+
+    if (name === "" || email === "" || password === "") {
+        msg.innerText = "Please fill all fields!";
+        msg.style.color = "yellow";
+        return;
+    }
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    let exists = users.find(user => user.email === email);
+
+    if (exists) {
+        msg.innerText = "Email already registered!";
+        msg.style.color = "orange";
+        return;
+    }
+
+    let newUser = {
+        name: name,
+        email: email,
+        password: password
+    };
+
+    users.push(newUser);
+    localStorage.setItem("users", JSON.stringify(users));
+
+    localStorage.setItem("loggedInUser", JSON.stringify(newUser));
+
+    msg.style.color = "lightgreen";
+    msg.innerText = "Account created! Redirecting...";
+
+    setTimeout(() => {
+        window.location.href = "home.html";
+    }, 1000);
+}
+</script>
+
+</body>
+</html>
