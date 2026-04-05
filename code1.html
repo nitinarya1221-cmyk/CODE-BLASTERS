@@ -241,6 +241,12 @@ function goToPayment() {
 
     window.location.href = "pay.html";
 }
+    function goToPayment() {
+    let total = document.getElementById("total").innerText;
+    localStorage.setItem("totalAmount", total);
+
+    window.location.href = "pay.html";
+}
 </script>
 <script>
 
