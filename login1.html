@@ -99,7 +99,7 @@ function login() {
     let password = document.getElementById("password").value.trim();
     let msg = document.getElementById("msg");
 
-    // 1. Empty check
+    
     if (email === "" || password === "") {
         msg.innerText = "Please enter email and password!";
         return;
@@ -107,7 +107,7 @@ function login() {
 
     let users = JSON.parse(localStorage.getItem("users")) || [];
 
-    // 2. Find user
+    
     let user = users.find(u => u.email === email);
 
     if (!user) {
@@ -115,20 +115,20 @@ function login() {
         return;
     }
 
-    // 3. Check password
+    
     if (user.password !== password) {
         msg.innerText = "Incorrect password!";
         return;
     }
 
-    // 4. SUCCESS → Only here it will go to homepage
+    
     localStorage.setItem("loggedInUser", JSON.stringify(user));
 
     msg.style.color = "lightgreen";
     msg.innerText = "Login successful! Redirecting...";
 
     setTimeout(() => {
-        window.location.href = "index.html"; // your home page
+        window.location.href = "index.html";
     }, 1000);
 }
 </script>
