@@ -229,13 +229,10 @@ function goToPayment() {
     });
 
     let ticketCount = selectedSeats.length;
-
-    // 🔥 ADD THESE
     localStorage.setItem("ticketAmount", amount);
     localStorage.setItem("selectedSeats", selectedSeats.join(", "));
     localStorage.setItem("ticketCount", ticketCount);
 
-    // 👉 Set movie name manually OR from another page
 
     window.location.href = "pay.html";
 }
