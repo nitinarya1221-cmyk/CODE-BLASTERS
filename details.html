@@ -121,7 +121,7 @@ function downloadPDF() {
     let time = localStorage.getItem("showTime");
 
     doc.setFontSize(18);
-    doc.text("🎬 CineGo Movie Ticket", 20, 20);
+    doc.text(" CineGo Movie Ticket", 20, 20);
     if (img) {
         doc.addImage(img, "JPEG", 20, 30, 60, 40);
     }
