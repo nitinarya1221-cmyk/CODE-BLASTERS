@@ -45,6 +45,9 @@ display:flex;
 justify-content:center;
 margin:5px;
 }
+.row h3{
+     color: aliceblue;
+}
 
 .row-label{
 width:20px;
@@ -102,7 +105,10 @@ h2{
     <nav>
 <h2>CineGo Seat Booking</h2></nav>
 </header>
-
+<div class="row">
+<div class="seat"></div><h3>Available</h3>
+<div class="seat sold"></div><h3>Sold</h3>
+</div>
 <div class="section-title">PLATINUM</div>
 
 <div class="row">
@@ -232,7 +238,6 @@ function goToPayment() {
     localStorage.setItem("ticketAmount", amount);
     localStorage.setItem("selectedSeats", selectedSeats.join(", "));
     localStorage.setItem("ticketCount", ticketCount);
-
 
     window.location.href = "pay.html";
 }
