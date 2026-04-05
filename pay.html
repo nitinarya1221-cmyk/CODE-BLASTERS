@@ -114,11 +114,11 @@ function validateName() {
     }
 
     error.textContent = "";
-    return true; // ✅ VERY IMPORTANT
+    return true; 
 }
 
 function payNow() {
-    let isValid = validateName(); // store result
+    let isValid = validateName(); 
 
     if (isValid === true) {
         window.location.href = "success.html";
